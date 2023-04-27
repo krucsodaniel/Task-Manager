@@ -20,6 +20,7 @@ https://github.com/krucsodaniel/taskManager.git
     - Tetszőleges terminál nyitása, dedikált mappába benavigálás
     - Az alábbi parancs kiadása
      ```git clone https://github.com/krucsodaniel/taskManager.git```
+    - Az alkalmazás MongoDB adatbázissal dolgozik, az ehhez szükséges kulcsok, változók végett kérem keressen e-mailben a daniel.krucso21@gmail.com e-mail címen.
 
 
 ## Az alkalmazás előkészítése fejlesztéshez
