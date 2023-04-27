@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jest",
+    "test:lists": "jest src/controller/list/list.controller.test.js",
+    "test:tasks": "jest src/controller/task/task.controller.test.js",
+    "test:users": "jest src/controller/user/user.controller.test.js",
+    "test:supertest": "jest src/server.test.js",
+    "start:nodemon": "nodemon src/server.js",
+    "docker:build": "docker build -t fsapi-remek-assignment-krucsodaniel:latest .",
+    "docker-compose:up": "docker-compose up"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.10.0",
+    "morgan": "^1.10.0",
+    "supertest": "^6.3.3",
+    "swagger-ui-express": "^4.6.2",
+    "winston": "^3.8.2",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-mock-req-res": "^1.0.2"
+  }
+}

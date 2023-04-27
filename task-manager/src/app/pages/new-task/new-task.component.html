@@ -1,0 +1,19 @@
+<div class="container-fluid background-container">
+  <div class="container centered-content">
+    <div class="modal-box">
+      <h1 class="title">
+        Create a new task
+      </h1>
+
+      <div class="mb-3">
+        <input #taskTitleInput type="text" class="form-control" placeholder="Enter task name">
+      </div>
+
+      <div class="btn-group d-flex" role="group">
+        <button routerLink="/lists" class="btn btn-danger">Cancel</button>
+        <button class="btn btn-success" (click)="createTask(taskTitleInput.value)">Create</button>
+      </div>
+
+    </div>
+  </div>
+</div>

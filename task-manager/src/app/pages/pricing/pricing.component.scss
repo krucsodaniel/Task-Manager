@@ -1,0 +1,416 @@
+.background-container {
+  background: linear-gradient(to right top, #44ddd0, #27d7a1);
+}
+
+.card-container {
+  padding: 200px;
+}
+
+
+.card {
+  margin: 30px;
+  min-width: 200px;
+  min-height: 300px;
+
+  padding: 1rem;
+  border-radius: 1rem;
+  border: .5vmin solid #05060f;
+  box-shadow: .4rem .4rem #05060f;
+  overflow: hidden;
+
+
+  &-starter {
+    background: #00FFA0;
+    cursor: pointer;
+    transition: transform 0.3s ease, rotate 0.5s ease, box-shadow 0.5s ease;
+
+    &:hover {
+      background: #23f5a8;
+      rotate: -2deg;
+      transform: scale(1.1);
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &-premium {
+    background: #858988;
+    cursor: pointer;
+    transition: animation 0.3s ease;
+
+    &:hover {
+      animation-name: shake;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      cursor: pointer;
+    }
+  }
+
+  &-pro {
+    background: #858988;
+    cursor: pointer;
+    transition: animation 0.3s ease;
+
+    &:hover {
+      animation-name: shake;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      cursor: pointer;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+
+    10% {
+      transform: translateX(-10px);
+    }
+
+    20% {
+      transform: translateX(10px);
+    }
+
+    30% {
+      transform: translateX(-10px);
+    }
+
+    40% {
+      transform: translateX(10px);
+    }
+
+    50% {
+      transform: translateX(-10px);
+    }
+
+    60% {
+      transform: translateX(10px);
+    }
+
+    70% {
+      transform: translateX(-10px);
+    }
+
+    80% {
+      transform: translateX(10px);
+    }
+
+    90% {
+      transform: translateX(-10px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+}
+
+
+.pricing-block-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.pricing-plan {
+  color: #05060f;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.price-value {
+  display: flex;
+  color: #05060f;
+  font-size: 1.8rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.pricing-note {
+  opacity: .8;
+}
+
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+.check-list-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+}
+
+.blur {
+  color: transparent;
+  text-shadow: 0 0 8px #000;
+}
+
+
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #2980b9;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: #db3434;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  color: #fff;
+  font: 700 14px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ribbon-top-right {
+  top: -10px;
+  right: -10px;
+}
+
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+
+.ribbon-top-right span {
+  left: -25px;
+  top: 30px;
+  transform: rotate(45deg);
+}
+
+
+
+.floating-container {
+  position: relative;
+  height: 100vh;
+}
+
+.icon {
+  position: absolute;
+  font-size: 30px;
+  animation: float-rotate 8s ease-in-out infinite;
+  cursor: pointer;
+
+
+}
+
+.icon:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.icon:nth-child(2) {
+  top: 20%;
+  left: 30%;
+  animation-delay: -2s;
+}
+
+.icon:nth-child(3) {
+  top: 50%;
+  left: 20%;
+  animation-delay: -4s;
+}
+
+.icon:nth-child(4) {
+  top: 70%;
+  left: 50%;
+  animation-delay: -6s;
+}
+
+.icon:nth-child(5) {
+  top: 30%;
+  left: 70%;
+  animation-delay: -8s;
+}
+
+.icon:nth-child(6) {
+  top: 80%;
+  right: 30%;
+  animation-delay: -5s;
+}
+
+.icon:nth-child(7) {
+  top: 50%;
+  right: 20%;
+  animation-delay: -7s;
+}
+
+.icon:nth-child(8) {
+  top: 20%;
+  right: 70%;
+  animation-delay: -4s;
+}
+
+.icon:nth-child(9) {
+  top: 60%;
+  right: 65%;
+  animation-delay: -6s;
+}
+
+.icon:nth-child(10) {
+  top: 90%;
+  right: 45%;
+  animation-delay: -8s;
+}
+
+
+
+@keyframes float-rotate {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(calc((0.5 - random()) * 10vw),
+        calc((0.5 - random()) * 10vh)) rotate(180deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+// Laptops
+@media screen and (max-width: 1366px) {
+
+  .background-container {
+    
+    height: 700px;
+    background-color: #db3434;
+  }
+}
+
+//* Mobile
+@media screen and (max-width: 767px) {
+
+  .background-container {
+    padding-top: 200px;
+    height: 1300px;
+    overflow-x: hidden;
+  }
+
+  .card-container {
+    padding: 0;
+
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .icon:nth-child(1) {
+    top: 40%;
+    left: 30%;
+    animation-delay: 0s;
+  }
+
+  .icon:nth-child(2) {
+    top: 70%;
+    left: 80%;
+    animation-delay: -2s;
+  }
+
+  .icon:nth-child(3) {
+    top: 20%;
+    left: 70%;
+    animation-delay: -4s;
+  }
+
+  .icon:nth-child(4) {
+    top: 40%;
+    left: 70%;
+    animation-delay: -6s;
+  }
+
+  .icon:nth-child(5) {
+    top: 70%;
+    left: 20%;
+    animation-delay: -8s;
+  }
+
+  .icon:nth-child(6) {
+    top: 10%;
+    right: 70%;
+    animation-delay: -5s;
+  }
+
+  .icon:nth-child(7) {
+    top: 70%;
+    right: 40%;
+    animation-delay: -7s;
+  }
+
+  .icon:nth-child(8) {
+    top: 60%;
+    right: 90%;
+    animation-delay: -4s;
+  }
+
+  .icon:nth-child(9) {
+    top: 20%;
+    right: 35%;
+    animation-delay: -6s;
+  }
+
+  .icon:nth-child(10) {
+    top: 30%;
+    right: 65%;
+    animation-delay: -8s;
+  }
+
+  @keyframes float-rotate {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+      transform: translate(calc((0.5 - random()) * 100vw),
+          calc((0.5 - random()) * 100vh)) rotate(180deg);
+    }
+
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+    }
+
+  }
+
+}

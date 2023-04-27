@@ -1,0 +1,77 @@
+<div class="container-fluid centered-content">
+
+  <div class="row task-manager-container">
+
+    <div class="sidebar col-sm-6">
+      <div class="container timer-container text-center">
+        <h6 class="timer">{{countdownDisplay}}</h6>
+      </div>
+
+      <h1 class="title text-primary">
+        Lists
+      </h1>
+
+      <button routerLink="/new-list" class="add-list-btn-top">
+        Add List
+      </button>
+      <button *ngIf="btnActive" routerLink="./new-task" class="add-task-btn-top">
+        Add Task
+      </button>
+
+      <div class="list-menu">
+
+        <a class="list-menu-item d-flex justify-content-center align-items-center" *ngFor="let list of lists"
+          [routerLink]="['/lists', list._id]" routerLinkActive="is-active">
+          <div>
+            <p>{{list.title}}</p>
+          </div>
+          <div>
+            <svg (click)="deleteList(list)" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+              fill="currentColor" class="bi bi-x delete-list mx-3" viewBox="0 0 16 16">
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="tasks-list-container col-sm-6">
+
+      <h1 class="title text-primary">
+        Tasks
+      </h1>
+
+      <div class="task" *ngFor="let task of tasks!" [ngClass]="{'completed': task.completed}">
+        <p>{{task.title}}</p>
+
+        <div *ngIf="!task.completed" (click)="onTaskClick(task)"
+          class="d-flex justify-content-center align-items-center circle-emoji emoji">
+          <div>⭕</div>
+        </div>
+        <div *ngIf="task.completed" (click)="onTaskClick(task)"
+          class="d-flex justify-content-center align-items-center check-emoji emoji">
+          <div>✔️</div>
+        </div>
+
+        <div>
+          <div class="btn-group" role="group">
+            <button (click)="deleteTask(task)" type="button" class="btn btn-primary delete-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

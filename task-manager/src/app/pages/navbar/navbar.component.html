@@ -1,0 +1,20 @@
+<nav class="navbar" [class.is-scrolled]="isScrolled" [class.is-transparent]="isTransparent">
+  <a routerLink="home" class="navbar-logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/2048px-Home-icon.svg.png"
+      alt="Website logo">
+  </a>
+  <div class="navbar-items">
+    
+    <a class="navbar-item" *ngIf="!isLoggedIn" routerLink="pricing">Pricing</a>
+
+    <button *ngIf="isLoggedIn" (click)="goToDashboard()" class="dashboard-btn navbar-item">My Dashboard</button>
+
+    <button *ngIf="isLoggedIn" (click)="logout()" class="logout-btn navbar-item">
+      Logout
+    </button>
+
+    <button *ngIf="!isLoggedIn" (click)="goToLogin()" class="login-btn navbar-item">
+      Login
+    </button>
+  </div>
+</nav>

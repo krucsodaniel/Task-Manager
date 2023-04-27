@@ -1,0 +1,46 @@
+.background-container {
+  background: linear-gradient(to right top, #44ddd0, #27d7a1);
+  height: 100vh;
+}
+
+.first-section {
+  margin-top: 150px;
+
+  .hero-img {
+    max-width: 100%;
+
+  }
+
+}
+
+.home-btn {
+
+  background: #FBCA1F;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: black 0.1em 0.1em;
+  color: black;
+
+  &:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: black 0.15em 0.15em;
+    color: black;
+  }
+
+  &:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: black 0.05em 0.05em;
+  }
+}
+
+//* Mobile
+@media screen and (max-width: 767px) {
+
+  .background-container {
+    height: 800px;
+  }
+}

@@ -1,0 +1,43 @@
+<div class="container-fluid background-container login-background">
+  <div class="container d-md-flex justify-content-center login-container">
+    <form *ngIf="!loggedIn" class="form" [formGroup]="loginForm!" (ngSubmit)="onSubmit()">
+      <span class="signup">Log In</span>
+      <input formControlName="email" type="email" placeholder="Email address" class="form--input">
+      <input formControlName="password" type="{{ showPassword ? 'text' : 'password' }}" placeholder="Password"
+        class="form--input">
+      <div class="m-3">
+        <input class="m-2" type="checkbox"
+          (click)="togglePasswordVisibility()">{{ showPassword ? 'Hide password' : 'Show password' }}
+      </div>
+
+
+      <div class="form--marketing d-flex justify-content-center">
+        <div>
+          <p>Not registered? </p>
+        </div>
+        <div>
+          <p (click)="goToRegister()"><a class="register"> Register</a></p>
+        </div>
+
+      </div>
+
+      <p class="error-message" *ngIf="errorMessage">{{errorMessage}}</p>
+      <button type="submit" [disabled]="!loginForm!.valid" class="form--submit">
+        Log in
+      </button>
+    </form>
+
+    <div *ngIf="loggedIn" class="container d-md-flex justify-content-center logged-in-container">
+      <p>Welcome here <strong>{{userNickname}}</strong>, you are succesfully logged in!</p>
+      <div>
+        <button routerLink="/lists" class="dashboard-btn">Go to Dashboard</button>
+      </div>
+      <p>You have: <strong>{{countdownDisplay}}</strong> minutes left.</p>
+    </div>
+  </div>
+
+  <div class='air air1'></div>
+  <div class='air air2'></div>
+  <div class='air air3'></div>
+  <div class='air air4'></div>
+</div>

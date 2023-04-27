@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito&display=swap');
+
+$turquoise: #44ddd0;
+$green: #27d7a1;
+$light-green: #45f69e;
+$dark-green: rgb(0, 100, 80);
+
+$light: #f8f8f8;
+
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%
+}
